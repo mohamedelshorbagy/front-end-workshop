@@ -1,1 +1,1 @@
-# front-end-workshop
+# Front-End Workshop

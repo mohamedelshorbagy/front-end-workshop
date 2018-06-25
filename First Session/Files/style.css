@@ -1,0 +1,84 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+/*
+ How to call elements
+*/
+h2  {
+    background-color: brown;
+    color: white;
+}
+p {
+    background-color: rgb(231, 70, 69);
+}
+
+/*
+ # How to call elements inside elements
+*/
+
+.post p {
+    color:white;
+}
+
+.post {
+    margin-top: 20px;
+}
+
+/**
+ How to use margins & Paddings
+**/ 
+/**
+ # How to Adjust width & height for some elements
+**/
+/**
+    # How to make background color for some divs
+**/
+.two {
+    width: 150px;
+    height: 150px;    
+    background-color: rgb(231, 70, 69);
+    margin-left: 30px;
+    padding: 20px;  
+}
+.three {
+    width: 150px;
+    height: 150px;
+    background-color: rgb(52, 152, 220); 
+}
+.four {
+    width: 150px;
+    height: 150px;
+    background-color: aqua; 
+}
+
+
+/** 
+ # How Specifity Works, it works like css called ==> Cascaded respect to 
+ [ 
+     inline Styling ==> King
+     ID ==> 1
+     Class ==> 2
+     tags ==> 1
+ ]
+**/
+
+.two {
+    background-color: darkgoldenrod;
+}
+
+/**
+ # How to use Marigns & Paddings Together
+**/
+.one {
+    background-color: violet;
+    margin-bottom: 10px;
+}
+.span {
+    background: rgb(231, 70, 69);
+    padding: 15px;
+    color: white;
+    display: inline-block;
+    margin-bottom: 15px;
+}
