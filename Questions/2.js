@@ -16,14 +16,14 @@ var b = 10;
 function foo() {
     var c = 20;
     function bar(f) {
-        var x = 8;
+        x = 8;
         console.log(b, c, d, f, x);
     }
     var d = 5;
     bar(d * 10);
 }
 
-foo();
+foo(); //?
 
 /**
  * 
@@ -33,9 +33,11 @@ foo();
  */
 const arr = [10, 12, 15, 21];
 for (var i = 0; i < arr.length; i++) {
-    setTimeout(function () {
-        console.log('Index: ' + i + ', element: ' + arr[i]);
-    }, 3000);
+    (function IIFE(j) {
+        setTimeout(function () {
+            console.log('Index: ' + j + ', element: ' + arr[j]);
+        }, 3000);
+    })(i);
 }
 
 
@@ -45,7 +47,7 @@ for (var i = 0; i < arr.length; i++) {
  *  
  */
 var nodes = document.getElementsByTagName('button');
-for (var i = 0; i < nodes.length; i++) {
+for (let i = 0; i < nodes.length; i++) {
     nodes[i].addEventListener('click', function () {
         console.log('You clicked element #' + i);
     });

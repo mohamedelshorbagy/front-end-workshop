@@ -17,11 +17,12 @@ function foo() {
         return 3;
     }
     return bar();
-    function bar() {
+    var bar = function () {
         return 8;
     }
 }
-foo();
+var returnedValue = foo();
+console.log(returnedValue);
 
 /**
  * 

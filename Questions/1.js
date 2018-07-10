@@ -9,7 +9,7 @@
 /**
  * 
  * 
- * 1. How you can turn a string to number with (One Operator & JS Core Function) and give an example?
+ * 1. How you can turn a string to number with (One Operator & JS Core Function) and give an example? ==> Number() , +
  * 2. How you can turn a number to string with give an example (JS Core Function)?
  * 3. How you can turn a [string,number] to boolean with give an example (JS Core Function & One Operator)?
  * 4. Explain the 3 Rules of Coercion with Example for every Rule ?
@@ -26,6 +26,7 @@
  * 7. Tell me the output of the code bellow and Explain your answer.
  * 
  */
+// 'use strict';
 var y = 1, x = y = typeof x;
 x //?
 

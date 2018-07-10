@@ -12,3 +12,18 @@ add3(1, 2, 3) // 6
 add3(1, 2)(3) // 6 
 add3(1)(2, 3) // 6
 add3(1)(2)(3) // 6 
+
+
+function sum(a, b) {
+    if (b) {
+        return a + b;
+    } else {
+        return function (c) {
+            return a + c;
+        }
+    }
+}
+
+
+console.log(sum(2, 3));
+console.log(sum(2)(3));
