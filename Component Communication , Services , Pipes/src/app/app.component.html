@@ -1,0 +1,11 @@
+<div class="container">
+
+  <app-add-user></app-add-user>
+  <hr>
+  <input type="text" class="form-control" [(ngModel)]="searchBy" placeholder="Search ...">
+  <hr>
+  <div class="row">
+    <div class="col-12" *ngFor="let user of users | search:searchBy:'message'">
+      <app-user-card [userData]="user"></app-user-card>
+    </div>
+  </div>

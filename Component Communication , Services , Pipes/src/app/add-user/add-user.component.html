@@ -1,0 +1,27 @@
+<h3 class="text-center">Add User</h3>
+<div class="form-group">
+  <form (ngSubmit)="addUser(f)" #f="ngForm">
+    
+   <div *ngIf="name.errors">
+      <div class="alert alert-danger" *ngIf="name.errors.required && name.touched">Field is Required</div>
+    </div>
+    <input type="text" class="form-control" 
+    placeholder="Name"
+    name="name"
+    ngModel
+    #name="ngModel"
+    required
+    >
+    <div *ngIf="message.errors">
+        <div class="alert alert-danger" *ngIf="message.errors.required && message.touched">Field is Required</div>
+      </div>
+    <textarea class="form-control" 
+    placeholder="message"
+    name="message"
+    ngModel
+    #message="ngModel"
+    required
+    ></textarea>
+    <button class="btn btn-success" type="submit" [disabled]="!f.valid">Add User</button>
+  </form>
+</div>

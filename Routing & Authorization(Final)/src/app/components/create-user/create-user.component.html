@@ -1,0 +1,12 @@
+<div class="conatiner">
+  <div class="alert alert-info" *ngIf="message">{{ message }}</div>
+  <div class="row">
+    <div class="col-12">
+      <form class="form-group" (ngSubmit)="submitForm(f)" #f="ngForm">
+        <input placeholder="email" type="text" class="form-control" ngModel name="email" #email="ngModel" required>
+        <input placeholder="password" type="password" class="form-control" ngModel name="password" #password="ngModel" required>
+        <button type="submit" class="btn btn-primary" [disabled]="!f.valid">Login</button>
+      </form>
+    </div>
+  </div>
+</div>
