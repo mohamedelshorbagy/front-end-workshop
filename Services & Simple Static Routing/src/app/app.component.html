@@ -1,0 +1,3 @@
+<button class="btn btn-success" (click)="hideMe()">Add User</button>
+<app-create-user *ngIf="hide" (hide)="hideMe()"></app-create-user>
+<app-home *ngIf="!hide"></app-home>

@@ -1,0 +1,15 @@
+<button class="btn btn-primary" (click)="hideMe()">Hide Me From Create-User</button>
+
+<div class="conatiner">
+  <div class="alert alert-success" *ngIf="message">{{ message }}</div>
+  <div class="row">
+    <div class="col-12">
+      <form class="form-group" (ngSubmit)="submitForm(f)" #f="ngForm">
+        <input placeholder="name" type="text" class="form-control" ngModel name="name" #name="ngModel" required>
+        <input placeholder="email" type="text" class="form-control" ngModel name="email" #email="ngModel" required>
+        <input placeholder="password" type="password" class="form-control" ngModel name="password" #password="ngModel" required>
+        <button type="submit" class="btn btn-primary" [disabled]="!f.valid">Create</button>
+      </form>
+    </div>
+  </div>
+</div>
